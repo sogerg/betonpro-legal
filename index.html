@@ -3,103 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BétonPro — Politique de confidentialité / Privacy Policy</title>
+<title>BétonPro — Calculateur de béton pour professionnels du BTP</title>
 <style>
-  body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; max-width: 740px; margin: 0 auto; padding: 24px 20px 60px; color: #1e293b; line-height: 1.6; }
-  h1 { font-size: 26px; border-bottom: 3px solid #3b82f6; padding-bottom: 10px; }
-  h2 { font-size: 19px; color: #3b82f6; margin-top: 32px; }
-  .lang-switch { text-align: right; margin-bottom: 10px; }
-  .lang-switch a { color: #3b82f6; text-decoration: none; font-weight: bold; margin-left: 12px; }
-  .updated { color: #64748b; font-size: 13px; }
-  ul { padding-left: 22px; }
+  :root {
+    --bg: #e7e5e4;
+    --card: #f5f4f2;
+    --text: #1e1b4b;
+    --muted: #57534e;
+    --orange: #f97316;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+  .lang-switch { text-align: right; margin-bottom: 20px; }
+  .lang-switch a { color: var(--orange); text-decoration: none; font-weight: bold; margin-left: 12px; }
+  header { text-align: center; margin-bottom: 36px; }
+  .logo-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 64px; height: 64px; border-radius: 16px;
+    background: var(--orange); color: #fff; font-size: 28px; font-weight: bold;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  .tagline { color: var(--muted); font-size: 16px; margin: 0; }
+  .card {
+    background: var(--card); border-radius: 14px; padding: 24px;
+    margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .card h2 { font-size: 17px; margin-top: 0; color: var(--orange); }
+  ul.features { list-style: none; padding: 0; margin: 0; }
+  ul.features li { padding: 8px 0; border-bottom: 1px solid #d6d3d1; }
+  ul.features li:last-child { border-bottom: none; }
+  .stores { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .store-pill {
+    background: #d6d3d1; color: var(--muted); padding: 10px 16px;
+    border-radius: 8px; font-size: 13px; font-weight: bold;
+  }
+  footer { text-align: center; color: #94a3b8; font-size: 13px; margin-top: 36px; }
+  footer a { color: var(--orange); text-decoration: none; }
   #en { display: none; }
-  footer { margin-top: 40px; color: #94a3b8; font-size: 12px; }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<div class="lang-switch">
-  <a href="#" onclick="show('fr');return false;">Français</a>
-  <a href="#" onclick="show('en');return false;">English</a>
+  <div class="lang-switch">
+    <a href="#" onclick="show('fr');return false;">Français</a>
+    <a href="#" onclick="show('en');return false;">English</a>
+  </div>
+
+  <div id="fr">
+    <header>
+      <div class="logo-badge">BP</div>
+      <h1>BétonPro</h1>
+      <p class="tagline">Le calculateur de béton pour les professionnels du BTP</p>
+    </header>
+
+    <div class="card">
+      <h2>Ce que fait l'application</h2>
+      <p>BétonPro calcule en quelques secondes les volumes de béton, le ferraillage, le coffrage et le budget estimatif pour vos chantiers : dalles, poteaux, fondations, murs, linteaux, chaînages, voûtes et escaliers. Conçu pour être utilisé directement sur le terrain.</p>
+      <ul class="features">
+        <li>Calculs précis pour 9 types d'ouvrages en béton</li>
+        <li>Carnet de coulage avec photos, géolocalisation et météo</li>
+        <li>Génération de devis PDF</li>
+        <li>Disponible en 25 langues</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Disponibilité</h2>
+      <p>L'application est en cours de soumission sur les stores.</p>
+      <div class="stores">
+        <span class="store-pill">App Store — bientôt disponible</span>
+        <span class="store-pill">Google Play — bientôt disponible</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Informations légales</h2>
+      <p><a href="privacy.html">Politique de confidentialité</a></p>
+      <p>Contact : <a href="mailto:gregportailler@gmail.com">gregportailler@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div id="en">
+    <header>
+      <div class="logo-badge">BP</div>
+      <h1>BétonPro</h1>
+      <p class="tagline">The concrete calculator for construction professionals</p>
+    </header>
+
+    <div class="card">
+      <h2>What the app does</h2>
+      <p>BétonPro instantly calculates concrete volumes, rebar, formwork, and estimated budget for your job sites: slabs, columns, foundations, walls, lintels, tie-beams, arches and stairs. Built to be used directly on site.</p>
+      <ul class="features">
+        <li>Precise calculations for 9 types of concrete structures</li>
+        <li>Pouring log with photos, geolocation and weather</li>
+        <li>PDF quote generation</li>
+        <li>Available in 25 languages</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Availability</h2>
+      <p>The app is currently being submitted to the stores.</p>
+      <div class="stores">
+        <span class="store-pill">App Store — coming soon</span>
+        <span class="store-pill">Google Play — coming soon</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Legal</h2>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+      <p>Contact: <a href="mailto:gregportailler@gmail.com">gregportailler@gmail.com</a></p>
+    </div>
+  </div>
+
+  <footer>BétonPro — © 2026 Grégory Portailler</footer>
 </div>
-
-<div id="fr">
-<h1>Politique de confidentialité — BétonPro</h1>
-<p class="updated">Dernière mise à jour : 29 juin 2026</p>
-
-<p>BétonPro ("l'application") est édité par Grégory Portailler. Cette politique explique quelles données sont traitées par l'application et pourquoi.</p>
-
-<h2>1. Données stockées uniquement sur votre appareil</h2>
-<p>L'historique de vos projets (dimensions, matériaux, prix, informations client pour les devis, logo d'entreprise) est enregistré localement sur votre téléphone. Ces données ne sont jamais envoyées à nos serveurs ni à un tiers — elles restent sur votre appareil et sont supprimées si vous désinstallez l'application ou videz son cache.</p>
-
-<h2>2. Photos</h2>
-<p>Si vous utilisez la fonction "Carnet de coulage", vous pouvez prendre des photos (ferraillage, coulage) via l'appareil photo de votre téléphone. Ces photos sont utilisées uniquement pour générer vos rapports PDF localement et ne sont jamais transmises à nos serveurs.</p>
-
-<h2>3. Localisation</h2>
-<p>Le "Carnet de coulage" peut, avec votre autorisation explicite, utiliser la position GPS de votre appareil pour horodater/géolocaliser un rapport et récupérer la météo locale. Les coordonnées GPS sont envoyées au service météo tiers <strong>Open-Meteo</strong> (open-meteo.com) uniquement pour obtenir la météo du lieu — aucune autre information identifiante n'est transmise. Vous pouvez refuser cette permission ; les autres fonctions de l'application restent utilisables.</p>
-
-<h2>4. Abonnements et achats intégrés</h2>
-<p>La gestion des abonnements premium est assurée par notre prestataire <strong>RevenueCat</strong> (revenuecat.com), qui reçoit un identifiant anonyme lié à votre installation et les informations de transaction nécessaires pour valider et gérer votre abonnement auprès d'Apple App Store / Google Play. RevenueCat agit en tant que sous-traitant et n'utilise pas ces données à d'autres fins. Voir la politique de confidentialité de RevenueCat : <a href="https://www.revenuecat.com/privacy/" target="_blank">revenuecat.com/privacy</a>.</p>
-
-<h2>5. Ce que nous ne faisons pas</h2>
-<ul>
-  <li>Pas de compte ni d'inscription requis pour utiliser l'application.</li>
-  <li>Pas de publicité ni de revente de données à des tiers.</li>
-  <li>Pas de suivi publicitaire ni de profilage marketing.</li>
-</ul>
-
-<h2>6. Vos droits</h2>
-<p>Vos données de projet étant stockées localement, vous pouvez les supprimer à tout moment en désinstallant l'application ou en effaçant les données de l'application dans les réglages de votre téléphone. Pour toute question concernant vos données liées à un abonnement (RevenueCat), contactez-nous à l'adresse ci-dessous.</p>
-
-<h2>7. Enfants</h2>
-<p>L'application est un outil professionnel destiné aux artisans et professionnels du BTP, elle n'est pas destinée aux enfants.</p>
-
-<h2>8. Modifications</h2>
-<p>Cette politique peut être mise à jour ; la date en haut de page reflète la dernière modification.</p>
-
-<h2>9. Contact</h2>
-<p>Pour toute question : <a href="mailto:gregportailler@gmail.com">gregportailler@gmail.com</a></p>
-</div>
-
-<div id="en">
-<h1>Privacy Policy — BétonPro</h1>
-<p class="updated">Last updated: June 29, 2026</p>
-
-<p>BétonPro ("the app") is published by Grégory Portailler. This policy explains what data the app processes and why.</p>
-
-<h2>1. Data stored only on your device</h2>
-<p>Your project history (dimensions, materials, prices, client information for quotes, company logo) is saved locally on your phone. This data is never sent to our servers or to any third party — it stays on your device and is deleted if you uninstall the app or clear its cache.</p>
-
-<h2>2. Photos</h2>
-<p>If you use the "Pouring Log" feature, you may take photos (rebar, pouring) using your phone's camera. These photos are used only to generate your PDF reports locally and are never transmitted to our servers.</p>
-
-<h2>3. Location</h2>
-<p>The "Pouring Log" feature can, with your explicit permission, use your device's GPS position to timestamp/geolocate a report and fetch the local weather. GPS coordinates are sent to the third-party weather service <strong>Open-Meteo</strong> (open-meteo.com) solely to retrieve local weather data — no other identifying information is transmitted. You may decline this permission; the rest of the app remains usable.</p>
-
-<h2>4. Subscriptions and in-app purchases</h2>
-<p>Premium subscription management is handled by our provider <strong>RevenueCat</strong> (revenuecat.com), which receives an anonymous identifier tied to your installation and the transaction information required to validate and manage your subscription with the Apple App Store / Google Play. RevenueCat acts as a data processor and does not use this data for other purposes. See RevenueCat's privacy policy: <a href="https://www.revenuecat.com/privacy/" target="_blank">revenuecat.com/privacy</a>.</p>
-
-<h2>5. What we don't do</h2>
-<ul>
-  <li>No account or sign-up required to use the app.</li>
-  <li>No advertising and no selling of data to third parties.</li>
-  <li>No ad tracking or marketing profiling.</li>
-</ul>
-
-<h2>6. Your rights</h2>
-<p>Since your project data is stored locally, you can delete it at any time by uninstalling the app or clearing its data in your phone's settings. For any question regarding subscription-related data (RevenueCat), contact us at the address below.</p>
-
-<h2>7. Children</h2>
-<p>The app is a professional tool intended for construction tradespeople and professionals; it is not directed at children.</p>
-
-<h2>8. Changes</h2>
-<p>This policy may be updated; the date at the top of the page reflects the latest revision.</p>
-
-<h2>9. Contact</h2>
-<p>For any question: <a href="mailto:gregportailler@gmail.com">gregportailler@gmail.com</a></p>
-</div>
-
-<footer>BétonPro — © 2026 Grégory Portailler</footer>
 
 <script>
   function show(lang) {
